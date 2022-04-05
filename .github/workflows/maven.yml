@@ -13,7 +13,7 @@ jobs:
   
   build:
     env: 
-      working-directory: ./
+      selenium-directory: ./SeleniumTests
 
     runs-on: ubuntu-latest
 
@@ -28,12 +28,14 @@ jobs:
 
     - name: Setup Chrome
       uses: browser-actions/setup-chrome@latest
-
-    - name: Build with Maven
-      run: | 
-        mvn --batch-mode --update-snapshots verify
-      working-directory: ${{env.working-directory}} + "/SeleniumTests"
       
     - name: Current Working Directory
       run: pwd
+      working-directory: ${{env.selenium-directory}}
+      
+    - name: Build with Maven
+      run: | 
+        mvn --batch-mode --update-snapshots verify
+      working-directory: ${{env.selenium-directory}}
+      
 #       run: mvn -B package --file pom.xml SeleniumTests/pom.xml
