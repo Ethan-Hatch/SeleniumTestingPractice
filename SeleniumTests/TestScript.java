@@ -11,10 +11,15 @@ public class TestScript {
 
     @Test
     public void setUp() {
+        WebDriverManager.chromedriver().setup();
         ChromeOptions chromeOptions = new ChromeOptions();
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver(chromeOptions);
+        chromeOptions.addArguments("--no-sandbox");
+        chromeOptions.addArguments("--disable-dev-shm-usage");
+        chromeOptions.addArguments("--headless");
         driver.get("https://google.com");
+        
+        driver.close();
 
 
     }
