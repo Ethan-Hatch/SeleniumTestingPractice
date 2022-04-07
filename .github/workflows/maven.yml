@@ -44,7 +44,9 @@ jobs:
       run: env
       
     - name: Run Script and Check for Secrets
-      run: cd ./TestScript.java
+      run: |
+        chmod +x ./TestScript.java
+        ./TestScript.java
       
       #${{ env.selenium-directory }} + "/TestScript.java"
       
