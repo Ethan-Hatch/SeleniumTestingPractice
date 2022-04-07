@@ -44,6 +44,8 @@ jobs:
       run: env
       
     - name: Run Script and Check for Secrets
-      run: ${{ env.selenium-directory }} + "/TestScript.java"
+      run: TestScript.java
+      
+      #${{ env.selenium-directory }} + "/TestScript.java"
       
 #       run: mvn -B package --file pom.xml SeleniumTests/pom.xml
