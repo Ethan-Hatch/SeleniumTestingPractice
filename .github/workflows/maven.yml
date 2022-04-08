@@ -45,6 +45,7 @@ jobs:
       
     - name: Run Script and Check for Secrets
       run: |
+        ls -l ./TestScript.java
         chmod +x ./TestScript.java
         ./TestScript.java
       
