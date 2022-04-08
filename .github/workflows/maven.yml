@@ -47,7 +47,7 @@ jobs:
       run: |
         ls -l ${{ env.selenium-directory }}
         chmod +x ${{ env.selenium-directory }}
-        ${{ env.selenium-directory }}
+        ./TestScript.java
       
       #${{ env.selenium-directory }} + "/TestScript.java"
       
