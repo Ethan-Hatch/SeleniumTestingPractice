@@ -33,7 +33,7 @@ jobs:
       
     - name: Current Working Directory
       run: pwd
-      working-directory: ${{env.selenium-directory}}
+      working-directory: ${{env.selenium-directory}} + /TestScript.java
       
     - name: Build with Maven
       run: | 
