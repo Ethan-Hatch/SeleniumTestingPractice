@@ -45,9 +45,9 @@ jobs:
       
     - name: Run Script and Check for Secrets
       run: |
-        ls -l ./TestScript.java
-        chmod +x ./TestScript.java
-        ./TestScript.java
+        ls -l ${{ env.selenium-directory }}
+        chmod +x ${{ env.selenium-directory }}
+        ${{ env.selenium-directory }}
       
       #${{ env.selenium-directory }} + "/TestScript.java"
       
