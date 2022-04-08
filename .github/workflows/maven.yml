@@ -14,6 +14,7 @@ jobs:
   build:
     env: 
       selenium-directory: ./SeleniumTests
+      selenium-script: ./SeleniumTests/TestScript.java
       UT_ID_username: ${{ secrets.UTAH_ID_USER }}
       UT_ID_password: ${{ secrets.UTAH_ID_PASS }}
 
@@ -33,7 +34,7 @@ jobs:
       
     - name: Current Working Directory
       run: pwd
-      working-directory: ${{env.selenium-directory}} + /TestScript.java
+      working-directory: ${{env.selenium-directory}}
       
     - name: Build with Maven
       run: | 
@@ -47,7 +48,7 @@ jobs:
       run: |
         ls -l ${{ env.selenium-directory }}
         chmod +x ${{ env.selenium-directory }}
-        ${{ env.selenium-directory }} + "/TestScript.java"
+        ${{ env.selenium-script }}
       
       #${{ env.selenium-directory }} + "/TestScript.java"
       
