@@ -45,10 +45,11 @@ jobs:
       run: env
       
     - name: Run Script and Check for Secrets
-      run: |
-        ls -l ${{ env.selenium-script }}
-        chmod +x ${{ env.selenium-script }}
-        ${{ env.selenium-script }}
+      run: java -cp java ${{ env.selenium-script }}
+#       run: |
+#         ls -l ${{ env.selenium-script }}
+#         chmod +x ${{ env.selenium-script }}
+#         ${{ env.selenium-script }}
       
       #${{ env.selenium-directory }} + "/TestScript.java"
       
