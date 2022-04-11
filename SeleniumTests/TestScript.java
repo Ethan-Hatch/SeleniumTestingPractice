@@ -11,10 +11,10 @@ public class TestScript {
 
     public static void main(String[] args) {
         Map<String, String> env = System.getenv();
-        for (String envName : env.keySet()) {
-            //System.out.println(envName + ": " + env.get(envName));
-            System.out.format("%s=%s%n", envName, env.get(envName));
-        }
+//         for (String envName : env.keySet()) {
+//             //System.out.println(envName + ": " + env.get(envName));
+//             System.out.format("%s=%s%n", envName, env.get(envName));
+//         }
         
         System.out.println();
         System.out.println(System.getenv("UT_ID_username"));
