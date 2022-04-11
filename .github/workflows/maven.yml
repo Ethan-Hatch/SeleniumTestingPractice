@@ -14,7 +14,7 @@ jobs:
   build:
     env: 
       selenium-directory: ./SeleniumTests
-      selenium-script: ./SeleniumTests/TestScript.java
+      selenium-script: ./SeleniumTests/TestScript.sh
       UT_ID_username: ${{ secrets.UTAH_ID_USER }}
       UT_ID_password: ${{ secrets.UTAH_ID_PASS }}
 
