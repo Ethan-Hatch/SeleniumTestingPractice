@@ -17,8 +17,8 @@ public class TestScript {
         }
         
         System.out.println();
-        System.out.println(System.getenv("UT_ID_username");
-        System.out.println(System.getenv("UT_ID_password");
+        System.out.println(System.getenv("UT_ID_username"));
+        System.out.println(System.getenv("UT_ID_password"));
 //        ChromeOptions options = new ChromeOptions();
 //        WebDriverManager.chromedriver().setup();
 //        driver = new ChromeDriver(options);
