@@ -46,7 +46,7 @@ jobs:
       
     - name: Build with Maven
       run: | 
-        mvn -B package --file ${{env.selenium-directory}}
+        mvn -B install --file ${{env.selenium-directory}}
       #mvn --batch-mode --update-snapshots verify
       #working-directory: ${{env.selenium-directory}}
       
