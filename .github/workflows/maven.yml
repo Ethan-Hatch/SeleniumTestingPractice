@@ -33,15 +33,9 @@ jobs:
     - name: Setup Chrome
       uses: browser-actions/setup-chrome@latest
       
-    - name: Current Working Directory
-      run: pwd
-      working-directory: ${{env.selenium-directory}}
-      
-    - name: Build with Maven
-      run: | 
-        mvn -B package --file ${{env.selenium-directory}}
-      #mvn --batch-mode --update-snapshots verify
-      #working-directory: ${{env.selenium-directory}}
+#     - name: Current Working Directory
+#       run: pwd
+#       working-directory: ${{env.selenium-directory}}
       
     - name: Cashe the Maven Packages to Speed Up Build
       uses: actions/cashe@v1
@@ -49,7 +43,12 @@ jobs:
         path: ~/.m2
         key: ${{ $runner.os }}-m2-${{ hashfiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
-        
+      
+    - name: Build with Maven
+      run: | 
+        mvn -B package --file ${{env.selenium-directory}}
+      #mvn --batch-mode --update-snapshots verify
+      #working-directory: ${{env.selenium-directory}}
       
     - name: Print All Environment Variables
       run: env
