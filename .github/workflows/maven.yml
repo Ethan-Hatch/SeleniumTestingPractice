@@ -37,8 +37,8 @@ jobs:
 #       run: pwd
 #       working-directory: ${{env.selenium-directory}}
       
-    - name: Cashe the Maven Packages to Speed Up Build
-      uses: actions/cashe@v1
+    - name: Cache the Maven Packages to Speed Up Build
+      uses: actions/cache@v1
       with:
         path: ~/.m2
         key: ${{ runner.os }}-m2-${{ hashfiles('**/pom.xml') }}
