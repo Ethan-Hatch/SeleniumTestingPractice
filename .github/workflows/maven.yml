@@ -42,6 +42,13 @@ jobs:
         mvn -B package --file ${{env.selenium-directory}}
       #mvn --batch-mode --update-snapshots verify
       #working-directory: ${{env.selenium-directory}}
+      
+    - name: Cashe the Maven Packages to Speed Up Build
+      uses: actions/cashe@v1
+      with:
+        path: ~/.m2
+        key: ${{ $runner.os }}-m2-${{ hashfiles('**/pom.xml') }}
+        restore-keys: ${{ runner.os }}-m2
         
       
     - name: Print All Environment Variables
