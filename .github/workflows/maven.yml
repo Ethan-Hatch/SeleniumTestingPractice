@@ -39,8 +39,9 @@ jobs:
       
     - name: Build with Maven
       run: | 
-        mvn --batch-mode --update-snapshots verify
-      working-directory: ${{env.selenium-pom}}
+        mvn -B verify --file ${{env.selenium-directory}}
+      #mvn --batch-mode --update-snapshots verify
+      #working-directory: ${{env.selenium-directory}}
         
       
     - name: Print All Environment Variables
