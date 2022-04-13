@@ -32,21 +32,21 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-api</artifactId>
             <version>4.1.3</version>
-            <packaging>jar</packaging>
+<!--             <packaging>jar</packaging> -->
         </dependency>
 
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.1.3</version>
-            <packaging>jar</packaging>
+<!--             <packaging>jar</packaging> -->
         </dependency>
 
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>5.0.2</version>
-            <packaging>jar</packaging>
+<!--             <packaging>jar</packaging> -->
         </dependency>
 
     </dependencies>
