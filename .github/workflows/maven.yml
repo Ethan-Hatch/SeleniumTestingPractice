@@ -48,6 +48,7 @@ jobs:
       run: | 
         mvn -B install --file ${{env.selenium-directory}}
         mvn -B verify --file ${{env.selenium-directory}}
+        mvn package
       #mvn --batch-mode --update-snapshots verify
       #working-directory: ${{env.selenium-directory}}
       
